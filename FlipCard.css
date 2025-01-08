@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ana { 
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(48, 49, 49);
+    font-family: Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-1{
+    height: 650px;
+    width: 530px;
+    perspective: 1000px;
+    margin: 3rem;
+    
+}
+
+.container-2{
+    height: 515px;
+    width: 400px;
+    perspective: 500px;
+    margin: 3rem;
+
+}
+
+.container-3{
+    height: 650px;
+    width: 500px;
+    perspective: 1000px;
+    margin: 3rem;
+
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+   
+}
+
+.container-3:hover > .card {
+    transform: rotateY(180deg);
+}
+
+.container-2:hover > .card {
+    transform: rotateY(180deg);
+}
+
+.container-1:hover > .card {
+    transform: rotateY(180deg);
+}
+
+.back-1,.back-2,.back-3{
+    background-color: #d8d4d4;
+    transform: rotateY(180deg);
+}
+
+.front-1,
+.back-1,
+.front-2,
+.back-2,
+.front-3,
+.back-3 {
+height: 100%;
+width: 100%;
+border-radius: 2rem;
+box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+position: absolute;
+backface-visibility: hidden;
+}
+
+.front-1{
+    background-image: url(img/Şair\ Eşref.jpg) ;
+}
+
+.front-2{
+    background-image: url(img/Namik-Kemal.jpg);
+}
+
+.front-3{
+    background-image: url(img/Neyzen\ Tevfik.jpeg);
+}
+
+.back-1 ,.back-2,.back-3, h2, p {
+    text-align: center;
+    place-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    letter-spacing: 2px;
+   
+}
+
+
+header{
+    color: white;
+    text-align: center;
+   background-color: gray;
+   font-weight: bold;
+}
